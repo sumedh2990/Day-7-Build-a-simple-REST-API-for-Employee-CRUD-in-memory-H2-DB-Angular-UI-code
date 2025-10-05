@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+
+  <label>ID:</label>
+  <input type="number" [(ngModel)]="formData.id" name="id" placeholder="ID" />
+
+  <label>Job Title:</label>
+  <input type="text" [(ngModel)]="formData.title" name="title" placeholder="Job Title" />
+
+  <label>Description:</label>
+  <textarea [(ngModel)]="formData.desc" name="desc" placeholder="Job Description"></textarea>
+
+  <label>Minimum Salary:</label>
+  <input type="text" [(ngModel)]="formData.minSalary" name="minSalary" placeholder="Min Salary" />
+
+  <label>Maximum Salary:</label>
+  <input type="text" [(ngModel)]="formData.maxSalary" name="maxSalary" placeholder="Max Salary" />
+
+  <label>Location:</label>
+  <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Location" />
+
+  <button type="submit">Submit</button>
+
+</form>
