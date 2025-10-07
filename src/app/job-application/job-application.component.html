@@ -1,23 +1,26 @@
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" #jobForm="ngForm" class="job-form">
 
-  <label>ID:</label>
-  <input type="number" [(ngModel)]="formData.id" name="id" placeholder="ID" />
+  <label for="id">ID:</label>
+  <input type="number" id="id" [(ngModel)]="job.id" name="id" placeholder="Job ID" required />
 
-  <label>Job Title:</label>
-  <input type="text" [(ngModel)]="formData.title" name="title" placeholder="Job Title" />
+  <label for="title">Job Title:</label>
+  <input type="text" id="title" [(ngModel)]="job.title" name="title" placeholder="Job Title" required />
 
-  <label>Description:</label>
-  <textarea [(ngModel)]="formData.desc" name="desc" placeholder="Job Description"></textarea>
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="job.desc" name="description" placeholder="Job Description" required></textarea>
 
-  <label>Minimum Salary:</label>
-  <input type="text" [(ngModel)]="formData.minSalary" name="minSalary" placeholder="Min Salary" />
+  <label for="minSalary">Minimum Salary:</label>
+  <input type="text" id="minSalary" [(ngModel)]="job.minSalary" name="minSalary" placeholder="Min Salary" required />
 
-  <label>Maximum Salary:</label>
-  <input type="text" [(ngModel)]="formData.maxSalary" name="maxSalary" placeholder="Max Salary" />
+  <label for="maxSalary">Maximum Salary:</label>
+  <input type="text" id="maxSalary" [(ngModel)]="job.maxSalary" name="maxSalary" placeholder="Max Salary" required />
 
-  <label>Location:</label>
-  <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Location" />
+  <label for="location">Location:</label>
+  <input type="text" id="location" [(ngModel)]="job.location" name="location" placeholder="Location" required />
 
-  <button type="submit">Submit</button>
+  <label for="company">Company:</label>
+  <input type="text" id="company" [(ngModel)]="job.company" name="company" placeholder="Company Name" required />
+
+  <button type="submit" [disabled]="!jobForm.form.valid">Submit</button>
 
 </form>

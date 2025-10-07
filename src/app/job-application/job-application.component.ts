@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { JobApplicationService } from '../job-application.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Job } from '../models/job';
 
 @Component({
   selector: 'app-job-application',
@@ -10,27 +11,22 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './job-application.component.css'
 })
 export class JobApplicationComponent {
-  formData = {
+job: Job = {
     id: 0,
     title: '',
     desc: '',
     minSalary: '',
     maxSalary: '',
-    location: ''
+    location: '',
+    company: '' // add company if required
   };
 
 constructor(private jobService: JobApplicationService) {}
 
+
   onSubmit() {
-    this.jobService.submitApplication(this.formData).subscribe({
-      next: (response) => {
-        console.log('Success:', response);
-        alert('Application Submitted Successfully!');
-      },
-      error: (error) => {
-        console.error('Error:', error);
-        alert('Failed to submit application.');
-      }
+    this.jobService.createJob(this.job).subscribe(() => {
+      alert('Job added successfully!');
     });
   }
 }

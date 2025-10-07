@@ -1,0 +1,59 @@
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+th {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.btn-apply {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button-container {
+  text-align: center; /* Centers the button horizontally */
+  margin: 20px 0;     /* Adds some vertical spacing */
+}
+.pagination {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

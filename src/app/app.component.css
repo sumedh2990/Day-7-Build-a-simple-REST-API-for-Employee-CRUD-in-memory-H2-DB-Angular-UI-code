@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;              /* Center the heading */
+  font-size: 3rem;                 /* Large font size */
+  font-weight: 700;                /* Bold */
+  color: #2c3e50;                  /* Fallback color */
+  margin: 40px 0 30px 0;           /* Top and bottom spacing */
+  letter-spacing: 2px;             /* Slight spacing between letters */
+  text-transform: uppercase;       /* Uppercase letters */
+  background: linear-gradient(90deg, #3498db, #8e44ad); /* Gradient text */
+  
+  /* Text gradient compatibility */
+  -webkit-background-clip: text;   /* Chrome, Safari */
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;           /* Standard property for modern browsers */
+  color: transparent;              /* Needed for standard background-clip */
+  
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);          /* Slight zoom on hover */
+}
